@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/fav_red1.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>{% block title %}BlogIT |  {% endblock title %}</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,500,600|Roboto:400,700" rel="stylesheet"/>
+    
+      <!--CSS============================================= -->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+
+  <body>
+    <!-- Start Preloader Area -->
+	<div class="preloader-area">
+		<div class="loader-box">
+			<div class="loader"></div>
+		</div>
+	</div>
+	<!-- End Preloader Area -->
+    {% include 'partials/_navbar.html' %}
+    
+    {% block content %} {% endblock content %}
+    {% include 'partials/_footer.html' %}
+	  <!-- ####################### Start Scroll to Top Area ####################### -->
+	  <div id="back-top">
+		<a title="Go to Top" href="#"> <i class="ti-angle-double-up"></i> </a>
+	  </div>
+	  <!-- ####################### End Scroll to Top Area ####################### -->
+  
+	  <script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+	  <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	  <script
+		type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"
+	  ></script>
+	  <script src="{% static 'js/easing.min.js' %}"></script>
+	  <script src="{% static 'js/hoverIntent.js' %}"></script>
+	  <script src="{% static 'js/superfish.min.js' %}"></script>
+	  <script src="{% static 'js/mn-accordion.js' %}"></script>
+	  <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+	  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	  <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+	  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	  <script src="{% static 'js/mail-script.js' %}"></script>
+	  <script src="{% static 'js/wow.min.js' %}"></script>
+	  <script src="{% static 'js/main.js' %}"></script>
+	</body>
+  </html>
