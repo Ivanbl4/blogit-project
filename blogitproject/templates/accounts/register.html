@@ -3,66 +3,91 @@
 {% block title %} Register {% endblock title %}
 {% block content %}
 
-
-  <div class="mb-3">
-    <div class="row justify-content-center">
-      <div class="col-lg-4">
-        <img src="{% static 'img/heder_login1.jpg' %}" alt="" class="w-100 feature-img wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"/>
-      </div>
-      <div class="col-lg-4">
-        <div class="card-body py-5 px-md-5">
-          <form action="{% url 'register' %}" method="POST" class="volunter-form needs-validation mt-5" novalidate>
-            {% csrf_token %}
-              <div class="form-group">
-                <input name="username" type="text" class="form-control" placeholder="Your Username" autocomplete="off" required="">
-                <div class="valid-feedback">
-                  Looks good!
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-left {
+        margin-left: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-left {
+          margin-left: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center position: relative">
+        <div class="col-lg-5 mb-5 mb-lg-0 z-index: -1">
+          <img src="{% static 'img/heder_login1.jpg' %}" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="card cascading-left" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              z-index: 1;
+              ">
+            <div class="card-body p-4 shadow-5 text-center z-index: 1">
+              <div class="section-title text-center fw-bold mb-4">
+                <h2><span>Sign</span> up now</h2>
+              </div>
+              <!-- <h1 class="fw-bold mb-4">Sign up now</h1> -->
+              <form action="{% url 'register' %}" method="POST">
+                {% csrf_token %}
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="form-group">
+                  <input name="username" type="text" class="form-control" placeholder="Your Username" autocomplete="off" required="">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
-                <div class="invalid-feedback">
-                  Please choose a username.
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control" placeholder="Your Email" autocomplete="off">
                 </div>
+                <div class="form-group">
+                  <input name="password" type="password" class="form-control" placeholder="Your Password" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <input name="password1" type="password" class="form-control" placeholder="Re-type Password" autocomplete="off">
+                </div>
+                <div class="form-group text-center mt-5">
+                  <button type="submit" class="primary-btn col-md-6 mx-auto d-block" data-text="Register">
+                      <span>R</span>
+                      <span>e</span>
+                      <span>g</span>
+                      <span>i</span>
+                      <span>s</span>
+                      <span>t</span>
+                      <span>e</span>
+                      <span>r</span>
+                  </button>
+                </div>
+              </form>
+              <div class="text-center mb-2">
+                <span><strong>or</strong></span>
               </div>
-              <div class="form-group">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <input name="password" type="password" class="form-control" placeholder="Your Password" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <input name="password1" type="password" class="form-control" placeholder="Re-type Password" autocomplete="off">
-              </div>
-              <div class="form-group text-center mt-5">
-                <button type="submit" class="primary-btn col-md-6 mx-auto d-block" data-text="Register">
-                    <span>R</span>
-                    <span>e</span>
-                    <span>g</span>
+              <div class="text-center">
+                  <a href="{% url 'login' %}" class="primary-btn col-md-6 mx-auto d-block" data-text="Sign in">
+                    <span>S</span>
                     <span>i</span>
-                    <span>s</span>
-                    <span>t</span>
-                    <span>e</span>
-                    <span>r</span>
-                </button>
+                    <span>n</span>
+                    <span> </span>
+                    <span>i</span>
+                    <span>n</span>
+                  </a>
               </div>
-          </form>
-          <div class="text-center mb-2">
-            <span><strong>or</strong></span>
-          </div>
-          <div class="text-center">
-              <a href="{% url 'login' %}" class="primary-btn col-md-6 mx-auto d-block" data-text="Sign in">
-                <span>S</span>
-                <span>i</span>
-                <span>n</span>
-                <span> </span>
-                <span>i</span>
-                <span>n</span>
-              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Section: Design Block -->
-
-{% endblock %}
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+  {% endblock %}
