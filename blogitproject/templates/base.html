@@ -43,7 +43,7 @@
 	</div>
 	<!-- End Preloader Area -->
     {% include 'partials/_navbar.html' %}
-    
+    {% include 'partials/_alert.html' %}
     {% block content %} {% endblock content %}
     {% include 'partials/_footer.html' %}
 	  <!-- ####################### Start Scroll to Top Area ####################### -->
@@ -70,5 +70,11 @@
 	  <script src="{% static 'js/mail-script.js' %}"></script>
 	  <script src="{% static 'js/wow.min.js' %}"></script>
 	  <script src="{% static 'js/main.js' %}"></script>
+    <script type="text/javascript">
+      function closeAlert() {
+        setTimeout(function(){ $(".alert").alert('close'); }, 5000);
+      }
+      closeAlert();
+    </script>
 	</body>
   </html>
