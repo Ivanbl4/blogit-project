@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts', # add app pages
     'pages', # add app accounts
     'profiles', # add app profiles
+    'easy_thumbnails',
 ]
 
 MIDDLEWARE = [
