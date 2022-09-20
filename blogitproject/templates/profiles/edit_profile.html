@@ -71,7 +71,7 @@
                     <h2><span>Profile</span> details</h2>
               </div>
               <!-- <h1 class="fw-bold mb-4">Sign up now</h1> -->
-              <form action="{% url 'edit_user_profile' profile.user.username %}" method="POST" enctype="multipart/form-data" method="POST" novalidate="">
+              <form action="{% url 'edit_user_profile' profile.user.username %}" method="POST" enctype="multipart/form-data" novalidate="">
                 {% csrf_token %}
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row text-sm-left">
@@ -164,4 +164,4 @@
   <!-- Section: Design Block -->
 <!-- End Edit profile -->
 
-{% endblock %}
+{% endblock content %}

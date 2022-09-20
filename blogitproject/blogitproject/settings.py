@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'pages', # add app accounts
     'profiles', # add app profiles
     'easy_thumbnails',
+    'comments', # add app comments
+    'blogs', # add app blogs
+    # 'teggit', # add app taggit
 ]
 
 MIDDLEWARE = [
